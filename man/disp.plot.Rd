@@ -4,13 +4,13 @@
 \alias{nothing_y}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Plotting of irregular spaced matrix data with aribitary transformations. New Super-Experimental version.
+Plotting of irregular spaced matrix data with aribitary transformations.
 }
 \description{
-New Super-Experimental disp.plot3 function including gridded bivariate interpolation for irregular data from the akima package.
+Polygon 2D plotting of irregular spaced matrix data with aribitary transformations.
 }
 \usage{
-disp.plot6(x,y,z,fx=nothing_x,fy=nothing_y,nx=length(unique(x)),ny=length(unique(y)),method="bilinear",...)
+disp.plot(x,y,z,fx=nothing_x,fy=nothing_y,nx=length(unique(x)),ny=length(unique(y)),method="bilinear",...)
 nothing_x(x,y)
 nothing_y(x,y)
 }
@@ -41,11 +41,8 @@ The square image will be constructed from nx by ny polygons. If nx and ny are eq
   }
 }
 \details{
-A new version of the disp.plot function for plotting non-linearlly spaced data, with the addition of bivariate smoothing of the dataset. Experimental!
 
-Because the smoothing function is always called, disp.plot4 is x5 times slower than disp.plot3 when producing the same image.
-
-Also note, the use of fx and fy is different in this case. In this function fx and fy are passed as functions, not raw vectors. See the examples for how to use this method to plot dispersion.
+In this function fx and fy are passed as functions, not raw vectors. See the examples for how to use this method to plot dispersion.
 
 nothing_x(x,y) and nothing_y(x,y) are the default functions for transformations, and do nothing (i.e. return x and y respectivley)
 }
@@ -79,8 +76,8 @@ z<-SPPdispersion$reflection
 kx<-function(x,y) (2*pi/(x*1e-9))*sin(y*pi/180)
 omega<-function(x,y) 2*pi*3e8/(x*1e-9)
 
-disp.plot6(x,y,z)
+disp.plot(x,y,z)
 
-disp.plot6(x,y,z,fx=kx,fy=omega,nx=200,ny=200,method="bicubic")
+disp.plot(x,y,z,fx=kx,fy=omega,nx=200,ny=200,method="bicubic")
 }
 

@@ -1,9 +1,12 @@
 Package: ultrafastMonkey
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Misc Tools for work in Exeter University's Ultrafast Laser Lab
+Version: 0.1
 Date: 2015-02-18
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Tom Constant
+Maintainer: <tc340@ex.ac.uk>
+Description: Misc Tools for work in Exeter University's Ultrafast Laser Lab
+License: GPL
+Depends: ggplot2
+Imports: ggplot2
+Suggests: manipulate
