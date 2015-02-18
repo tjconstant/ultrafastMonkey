@@ -6,5 +6,6 @@ ultrafast_fluence<-function(power_mW=1,freq_khz=1.05, spot_diameter_microns=100,
   j_m2<-(power_mW*1e-3/(freq_khz*1e3))/(total_beam_area)
   mj_cm2 <- j_m2/10
   j_cm2 <- mj_cm2/100
+  
   return(data.frame(j_m2,mj_cm2,j_cm2))
 }
