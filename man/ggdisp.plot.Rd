@@ -56,24 +56,18 @@ a vector of R colors for the gradient on the resulting image plot.
 }
 \examples{
 
-library(fields)
+data(SPPdispersion)
 
-library(ggplot2)
+x<-SPPdispersion$wavelength*1e9
+y<-SPPdispersion$angle
+z<-SPPdispersion$reflection
 
-data(SPPdispersion) #load example dataset
+kx<-function(x,y) (2*pi/(x*1e-9))*sin(y*pi/180)
+omega<-function(x,y) 2*pi*3e8/(x*1e-9)
 
-wavelength<-SPPdispersion$wavelength
+ggdisp.plot(x,y,z)
 
-angle<-SPPdispersion$angle
-
-reflection<-SPPdispersion$reflection
-
-ggdisp.plot(wavelength,angle,reflection) #plot data
-
-kx<-(2*pi/wavelength)*sin(angle*pi/180)#transformation to dispersion plots
-omega<-2*pi*3e8/wavelength
-
-ggdisp.plot(wavelength,angle,reflection,kx,omega) #plot transformed data
+ggdisp.plot(x,y,z,fx=kx,fy=omega,nx=200,ny=200,method="bicubic")
 
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

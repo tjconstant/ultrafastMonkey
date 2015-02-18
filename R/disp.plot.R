@@ -1,4 +1,4 @@
-disp.plot<-function(x,
+disp.plot<-function( x,
                      y,
                      z,
                      fx=nothing_x,
