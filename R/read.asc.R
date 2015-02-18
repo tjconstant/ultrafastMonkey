@@ -15,7 +15,8 @@ read.asc<-function(file,
     p <- ggplot(output$data,aes(x,y))+
       scale_x_continuous(expand=c(0,0))+
       geom_line()+
-      xlab(label_wavelength(si_prefix="n"))+theme_bw()
+      xlab(label_wavelength(si_prefix="n"))+theme_bw()+
+      ylab(gsub(pattern = "  ",replacement = "",strsplit(a$details[5],split = ":")[[1]][2]))
     print(p)
   }
   
