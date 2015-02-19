@@ -7,5 +7,8 @@ ultrafast_fluence<-function(power_mW=1,freq_khz=1.05, spot_diameter_microns=100,
   mj_cm2 <- j_m2/10
   j_cm2 <- mj_cm2/100
   
+  if(mj_cm2 >=2 & mj_cm2<5) warning("Fluence is above photo-modification threshold of graphene.")
+  if(mj_cm2 >=5) warning("Fluence is above damage threshold of graphene.")
+  
   return(data.frame(j_m2,mj_cm2,j_cm2))
 }
