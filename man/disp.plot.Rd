@@ -78,5 +78,20 @@ omega<-function(x,y) 2*pi*3e8/(x*1e-9)
 disp.plot(x,y,z)
 
 disp.plot(x,y,z,fx=kx,fy=omega,nx=200,ny=200,method="bicubic")
+
+# Polar Coordinates example
+
+# Edit SPPdisperison to vary from wavelength from 0 to 400 and angle 0 to 360 degrees
+# Note, apart from the example, theres absolutley no reason to do this
+
+x <- SPPdispersion$wavelength*1e9-400
+y <- 359*(SPPdispersion$angle-min(SPPdispersion$angle))/(max(SPPdispersion$angle)-min(SPPdispersion$angle))
+z <- SPPdispersion$reflection
+
+# Polar Coordinate Transform
+fx <- function(x,y) x*sin(y*pi/180)
+fy <- function(x,y) x*cos(y*pi/180)
+
+disp.plot(x,y,z,fx,fy,nx=300,ny=300,method = "bicubic")
 }
 
