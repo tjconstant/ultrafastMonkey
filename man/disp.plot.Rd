@@ -31,7 +31,7 @@ function of x and y returning the functional transformation of the x-axis
 function of x and y returning the functional transformation of the y-axis
 }
   \item{nx,ny}{
-The square image will be constructed from nx by ny polygons. If nx and ny are equal to the defaults, length(unique(x)) and length(unique(y)), the plot produced will be identical to disp.plot3. Higher values of nx and ny will produce smoother plots.
+The square image will be constructed from nx by ny polygons. If nx and ny are equal to the defaults, length(unique(x)) and length(unique(y)), the plot produced will be a standard (uninterpolated) colorplot. Higher values of nx and ny will produce smoother plots.
 }
   \item{method}{
   Specifies the interpolation method to use. Default is 'bilinear' using akima::interp, you can also use 'bicubic' (from akima::bicubic.grid).
@@ -41,7 +41,6 @@ The square image will be constructed from nx by ny polygons. If nx and ny are eq
   }
 }
 \details{
-
 In this function fx and fy are passed as functions, not raw vectors. See the examples for how to use this method to plot dispersion.
 
 nothing_x(x,y) and nothing_y(x,y) are the default functions for transformations, and do nothing (i.e. return x and y respectivley)

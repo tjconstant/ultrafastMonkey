@@ -47,23 +47,18 @@ returns a dataframe of time vs signal
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
 
-## The function is currently defined as
-function (filename, time_max = 1, zero_offset = 1:10, quick_plot = T) 
-{
-    data <- read.table(filename)$V1
-    time <- seq(0, time_max, , length(read.table(filename)$V1))
-    data_offset <- data - mean(data[zero_offset])
-    if (quick_plot) {
-        plot(time, data_offset, xlab = "time (ps)", pch = 16)
-        grid()
-        lines(time, data_offset)
-    }
-    return(data.frame(time, data_offset))
-  }
+fake_data<-(3+rnorm(1:400,sd=5e-2)+(exp(-((1:400)-100)^2/20^2)))
+
+# make a fake delay_scan temp file for use in example
+tf<-tempfile()
+writeLines(text = as.character(fake_data),tf)
+
+#use read.delay_scan()
+fake_delay_scan<-read.delay_scan(tf,time_max = 4,time_offset = 1)
+
+#delete temp file
+unlink(tf)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

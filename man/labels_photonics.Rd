@@ -56,13 +56,13 @@ Tom Constant
 }
 
 \examples{
-plot(NA,NA,xlim=c(0,1),ylim=c(0,1))
-text(0.5,1,label_angular_frequency())
-text(0.5,0.9,label_azimuthal_angle())
-text(0.5,0.8,label_in_plane_wavevector(subscript="gamma",si_prefix="c"))
-text(0.5,0.7,label_polar_angle())
-text(0.5,0.6,label_reflection("TM"))
-text(0.5,0.5,label_wavelength(si_prefix="mu"))
-text(0.5,0.4,label_frequency(si_prefix="G"))
+plot(NA,NA,xlim=c(0,1),ylim=c(0,1),xaxt='n',yaxt='n',bty='n',xlab="",ylab="")
+text(0.5,1-0.2,label_angular_frequency())
+text(0.5,0.9-0.2,label_azimuthal_angle())
+text(0.5,0.8-0.2,label_in_plane_wavevector(subscript="gamma",si_prefix="c"))
+text(0.5,0.7-0.2,label_polar_angle())
+text(0.5,0.6-0.2,label_reflection("TM"))
+text(0.5,0.5-0.2,label_wavelength(si_prefix="mu"))
+text(0.5,0.4-0.2,label_frequency(si_prefix="G"))
 }
 
