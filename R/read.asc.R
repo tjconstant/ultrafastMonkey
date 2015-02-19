@@ -16,7 +16,7 @@ read.asc<-function(file,
       scale_x_continuous(expand=c(0,0))+
       geom_line()+
       xlab(label_wavelength(si_prefix="n"))+theme_bw()+
-      ylab(gsub(pattern = "  ",replacement = "",strsplit(a$details[5],split = ":")[[1]][2]))
+    ylab(gsub(pattern = "  ",replacement = "",strsplit(details[5],split = ":")[[1]][2]))
     print(p)
   }
   
