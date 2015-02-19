@@ -17,13 +17,13 @@ Example Wavelength-Angle-Reflectivity Dataset, in this case for a SPP excited an
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+Surface plasmon dispersion data from (unpublished) work by author.
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+Author
 }
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+None
 }
 \examples{
 data(SPPdispersion)

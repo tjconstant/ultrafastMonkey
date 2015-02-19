@@ -8,7 +8,18 @@ Plotting of irregular spaced matrix data with aribitary transformations using gg
 Plotting of irregular spaced matrix data with aribitary transformations using ggplot package.
 }
 \usage{
-ggdisp.plot(x,y=NA,z=NA,fx=x,fy=y,midpoint=FALSE,col=c("black","white"))
+
+ggdisp.plot(x, 
+            y,
+            z,
+            fx=nothing_x,
+            fy=nothing_y,
+            nx=length(unique(x)),
+            ny=length(unique(y)),
+            method="bilinear",
+            midpoint=FALSE,
+            return_data=F,
+            ...)
 }
 
 \arguments{
@@ -38,7 +49,7 @@ a vector of R colors for the gradient on the resulting image plot.
 This function works much the same as disp.plot, however in order to assign labels to each polygon set, so that geom_tile can work correctly, tweaks were needed to be made to poly.image(). These are included in the code. 
 }
 \value{
-
+Either a ggplot object or the dataset required to plot (depending on return_data flag)
 }
 \references{
 %% ~put references to the literature/web site here ~
@@ -52,7 +63,7 @@ Tom Constant
 
 
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
+\code{\link{disp.plot}}
 }
 \examples{
 
@@ -83,6 +94,3 @@ p <- ggplot(rbind(p1,p2), aes(x=xps, y=yps))+
 print(p)
 }
 
-% Add one or more standard keywords, see file 'KEYWORDS' in the
-% R documentation directory.
-}
