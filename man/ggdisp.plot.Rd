@@ -83,8 +83,8 @@ ggdisp.plot(x,y,z,fx=kx,fy=omega,nx=200,ny=200,method="bicubic")
 
 # Example for using facets
 
-p1<-data.frame(ggdisp.plot(x,y,z,fx=kx,fy=omega,return_data = T),label="Frequency")
-p2<-data.frame(ggdisp.plot(x,y,z,fx=kx,return_data = T),label="Angle")
+p1<-data.frame(ggdisp.plot(x,y,z,fx=kx,fy=omega,return_data = TRUE),label="Frequency")
+p2<-data.frame(ggdisp.plot(x,y,z,fx=kx,return_data = TRUE),label="Angle")
 
 p <- ggplot(rbind(p1,p2), aes(x=xps, y=yps))+
   geom_polygon(aes(fill=zps,color=zps,group=ids))+

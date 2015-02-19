@@ -67,6 +67,8 @@ ggdisp.plot<-function(x,                     # x vector
   
   ggdataframe<-data.frame(ids,xps,yps,zps)
   
+  require(ggplot2)
+  
   p <- ggplot(ggdataframe, aes(x=xps, y=yps))+
     geom_polygon(aes(fill=zps,color=zps,group=ids))+
     scale_x_continuous(expand=c(0,0))+

@@ -8,7 +8,12 @@ Quick analysis and plot of time dynamics
 Takes an average time dynamics dataset and returns a dataframe and optionally plots data.
 }
 \usage{
-read.delay_scan(filename, time_max = 1, zero_offset = 1:10, quick_plot = T)
+read.delay_scan(filename, 
+                time_max = 4, 
+                time_offset = 0,
+                zero_offset = 1:10, 
+                quick_plot = T,
+                ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -18,11 +23,17 @@ The filename of the averaged output file from labview
   \item{time_max}{
 maximum time in the scan
 }
+  \item{time_offset}{
+Adjust the time axis to allow delay overlap to be corrected
+}
   \item{zero_offset}{
 Add a zero offset if required
 }
   \item{quick_plot}{
 Toggle a quick plot
+}
+  \item{...}{
+Additional arguements sent to base plot function.
 }
 }
 \details{

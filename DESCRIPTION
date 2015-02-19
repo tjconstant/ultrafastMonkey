@@ -7,6 +7,6 @@ Author: Tom Constant
 Maintainer: <tc340@ex.ac.uk>
 Description: Misc Tools for work in Exeter University's Ultrafast Laser Lab
 License: GPL
-Depends: akima, fields, scales, ggplot2
-Imports: 
+Depends: 
+Imports: akima, fields, scales, ggplot2
 Suggests: manipulate

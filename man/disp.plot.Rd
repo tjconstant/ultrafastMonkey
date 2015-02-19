@@ -10,7 +10,17 @@ Plotting of irregular spaced matrix data with aribitary transformations.
 Polygon 2D plotting of irregular spaced matrix data with aribitary transformations.
 }
 \usage{
-disp.plot(x,y,z,fx=nothing_x,fy=nothing_y,nx=length(unique(x)),ny=length(unique(y)),method="bilinear",...)
+disp.plot(x,
+          y,
+          z,
+          fx=nothing_x,
+          fy=nothing_y,
+          nx=length(unique(x)),
+          ny=length(unique(y)),
+          method="bilinear",
+          return_data=F,
+          ...)
+          
 nothing_x(x,y)
 nothing_y(x,y)
 }
@@ -35,6 +45,9 @@ The square image will be constructed from nx by ny polygons. If nx and ny are eq
 }
   \item{method}{
   Specifies the interpolation method to use. Default is 'bilinear' using akima::interp, you can also use 'bicubic' (from akima::bicubic.grid).
+  }
+    \item{return_data}{
+  Returns a list of the three matricies used for image.plot
   }
   \item{...}{
   The usual arguments to the image function as x,y,or z or as a list with x,y,z as components. One can also include a breaks argument for an unequal color scale with color scale boundaries at the breaks (see example in the image.plot documentation).

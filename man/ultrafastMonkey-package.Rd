@@ -34,5 +34,5 @@ Maintainer: Who to complain to <tc340@ex.ac.uk>
 ~~ \code{\link[<pkg>:<pkg>-package]{<pkg>}} ~~
 }
 \examples{
-~~ simple examples of the most important functions ~~
+
 }

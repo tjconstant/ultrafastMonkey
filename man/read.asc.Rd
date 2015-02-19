@@ -8,7 +8,7 @@ Read in an asc spectra file.
 Reads in a asc spectra file, including any acquisition parameters
 }
 \usage{
-read.asc(file, acquisition.appended = T)
+read.asc(file, acquisition.appended = T, quick_plot=T)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,6 +17,9 @@ The file to be read
 }
   \item{acquisition.appended}{
 Flag to include appened acquisition data to the resulting list. currently unfinished.
+}
+  \item{quick_plot}{
+Flag to generate quick plot of data imported.
 }
 }
 \details{

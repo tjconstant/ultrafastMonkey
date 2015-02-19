@@ -8,7 +8,10 @@ Calculation of Incident Fluence from a Pulsed Laser System
 Calculation of the incident power per unit area (fluence) from a pulsed laser system given various parameters
 }
 \usage{
-ultrafast_fluence(power_mW = 1, freq_khz = 1.05, spot_diameter_microns = 100, beam_angle_deg = 60)
+ultrafast_fluence(power_mW = 1, 
+                  freq_khz = 1.05, 
+                  spot_diameter_microns = 100, 
+                  beam_angle_deg = 60)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -47,7 +50,9 @@ Tom Constant
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-ultrafast_fluence(power_mW = 0.3,spot_diameter_microns = 200,beam_angle_deg = 20)
+ultrafast_fluence(power_mW = 0.3,
+                  spot_diameter_microns = 200,
+                  beam_angle_deg = 20)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

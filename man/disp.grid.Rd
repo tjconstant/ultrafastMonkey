@@ -8,7 +8,12 @@ Wrapper function for akima interpolations
 This function takes standard long dataset expected by the package's image.plot based functions and returns the appropriate interpolated matrices for the xyz values. Mostly used internally in disp.plot and ggdisp.plot.
 }
 \usage{
-disp.grid(x, y, z, nx = length(unique(x)), ny = length(unique(y)), method = "bilinear", ...)
+disp.grid(x, 
+          y, 
+          z, 
+          nx = length(unique(x)), 
+          ny = length(unique(y)), 
+          method = "bilinear")
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -61,7 +66,9 @@ returns a list
 }
 \examples{
 data(SPPdispersion)
-a<-disp.grid(SPPdispersion$wavelength*1e9,SPPdispersion$angle,SPPdispersion$reflection)
+a<-disp.grid( SPPdispersion$wavelength*1e9,
+              SPPdispersion$angle,
+              SPPdispersion$reflection)
 image(a$x)
 image(a$z)
 }
