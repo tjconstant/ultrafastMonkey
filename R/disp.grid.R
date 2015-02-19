@@ -3,8 +3,7 @@ disp.grid<-function(x,
                     z,
                     nx=length(unique(x)),
                     ny=length(unique(y)),
-                    method="bilinear",
-                    ...){
+                    method="bilinear"){
   
   if(x[2]-x[1]==0 & y[2]-y[1]!=0 & method=="bicubic"){
     warning("x and y values are in unexpected order. Try swapping x & y.")
