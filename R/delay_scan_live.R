@@ -32,9 +32,6 @@ delay_scan_live <- function(file,steps,delay){
   
 }
 
-delay_scan_live(file = "/Volumes/data/Tom/26022015 GNR 4WM/overnight",
-               steps=800,
-               delay=5)
 
 
 

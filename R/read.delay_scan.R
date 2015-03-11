@@ -2,6 +2,8 @@ read.delay_scan<-function(filename,
                           time_max=4,
                           time_offset=0,
                           zero_offset=1:10,
+                          measurement_type="%",
+                          lock_in_mV=100,
                           quick_plot=T,
                           ...){
   
@@ -11,8 +13,18 @@ read.delay_scan<-function(filename,
   
   data_offset<-data-mean(data[zero_offset])
   
+  if(measurement_type=="%"){
+    scale_factor<-100
+  }else if(measurement_type=="abs"){
+    scale_factor<-1
+  }else{
+    stop("Unknown measurement type. Acceptable values are '%' or 'abs'")
+  }
+  
+  data_offset<-lock_in_mV*data_offset/scale_factor
+  
   if(quick_plot){
-    plot(time,data_offset,xlab="time (ps)",pch=16,...);grid();lines(time,data_offset,...)
+    plot(time,data_offset,xlab="time (ps)",ylab="signal (mV)",pch=16,...);grid();lines(time,data_offset,...)
   }
   
   return(data.frame(time=time,signal=data_offset))
