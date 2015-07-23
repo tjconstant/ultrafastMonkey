@@ -19,14 +19,17 @@ read.asc<-function(file,
     
     if(quick_plot){
       
-      library(ggplot2)
+#       library(ggplot2)
+#       
+#       p <- ggplot(output$data,aes(x,y))+
+#         scale_x_continuous(expand=c(0,0))+
+#         geom_line()+
+#         xlab(label_wavelength(si_prefix="n"))+theme_bw()+
+#         ylab(gsub(pattern = "  ",replacement = "",strsplit(details[5],split = ":")[[1]][2]))
+#       print(p)
       
-      p <- ggplot(output$data,aes(x,y))+
-        scale_x_continuous(expand=c(0,0))+
-        geom_line()+
-        xlab(label_wavelength(si_prefix="n"))+theme_bw()+
-        ylab(gsub(pattern = "  ",replacement = "",strsplit(details[5],split = ":")[[1]][2]))
-      print(p)
+      return(fit.asc(output))
+      
     }
   }else if(scan_type==" Kinetics"){
     
