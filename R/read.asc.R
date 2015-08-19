@@ -9,7 +9,7 @@ read.asc<-function(file,
 
   scan_type<-gsub(pattern = "  ",replacement = "",strsplit(details[6],split = ":")[[1]][2])
   
-  if(scan_type==" Single Scan" || scan_type==" Accumulate" || scan_type=="Real Time"){
+  if(scan_type==" Single Scan" || scan_type==" Accumulate" || scan_type==" Real Time"){
     
     message("Scan Type: Single/Accumulate")
     
