@@ -1,3 +1,11 @@
+#' Fit Spectrum peak from Solaris ASCII output
+#'
+#' @param asc 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fit.asc <-function(asc){
   
   kable<-knitr::kable

@@ -1,3 +1,14 @@
+#' Generic Fit Gaussian Function
+#'
+#' @param x 
+#' @param y 
+#' @param s 
+#' @param m 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 fit_gaussian<-function(x,y,s=30,m=NA){
   
   if(is.na(m)){

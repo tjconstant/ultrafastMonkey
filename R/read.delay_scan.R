@@ -1,3 +1,18 @@
+#' Read Averaged Time Dynamics Output
+#'
+#' @param filename 
+#' @param time_max 
+#' @param time_offset 
+#' @param zero_offset 
+#' @param measurement_type 
+#' @param lock_in_mV 
+#' @param quick_plot 
+#' @param ... 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 read.delay_scan<-function(filename,
                           time_max=4,
                           time_offset=0,

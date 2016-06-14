@@ -1,3 +1,21 @@
+#' ggplot2 version of disp.plot
+#'
+#' @param x 
+#' @param y 
+#' @param z 
+#' @param fx 
+#' @param fy 
+#' @param nx 
+#' @param ny 
+#' @param method 
+#' @param midpoint 
+#' @param return_data 
+#' @param ... 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 ggdisp.plot<-function(x,                     # x vector
                       y,                     # y vector
                       z,                     # z vector

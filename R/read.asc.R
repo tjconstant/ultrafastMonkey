@@ -1,3 +1,13 @@
+#' Read ASCII outout from Solaris
+#'
+#' @param file 
+#' @param acquisition.appended 
+#' @param quick_plot 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 read.asc<-function(file,
                    acquisition.appended=T,
                    quick_plot=T){

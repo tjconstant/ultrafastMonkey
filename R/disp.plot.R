@@ -1,3 +1,23 @@
+#' Plotting of irregular spaced matrix data with aribitary transformations.
+#'
+#' @description Polygon 2D plotting of irregular spaced matrix data with aribitary transformations.
+#' @param x 
+#' @param y 
+#' @param z 
+#' @param fx 
+#' @param fy 
+#' @param nx 
+#' @param ny 
+#' @param method 
+#' @param return_data 
+#' @param ... 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
+
 disp.plot<-function( x,
                      y,
                      z,

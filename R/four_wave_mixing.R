@@ -1,3 +1,19 @@
+#' Quick Four-Wave Mixing Calculations
+#'
+#' @param lambda.1 
+#' @param lambda.2 
+#' @param lambda.3 
+#' @param difference.frequency 
+#' @param theta.1 
+#' @param theta.2 
+#' @param theta.3 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
+#' 
 four_wave_mixing <-
   
   function(lambda.1=NA,

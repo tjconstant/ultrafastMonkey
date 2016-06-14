@@ -1,3 +1,14 @@
+#' Live Plot of Ongoing Delay Scan
+#'
+#' @param file 
+#' @param steps 
+#' @param delay 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+#' 
 delay_scan_live <- function(file,steps,delay){
   
   par(mfcol = c(2,1),mar=c(4,4,1,1))

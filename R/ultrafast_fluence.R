@@ -1,3 +1,14 @@
+#' Ultrafast Fluence Calculation
+#'
+#' @param power_mW 
+#' @param freq_khz 
+#' @param spot_diameter_microns 
+#' @param beam_angle_deg 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 ultrafast_fluence<-function(power_mW=1,freq_khz=1.05, spot_diameter_microns=100,beam_angle_deg=60){
   
   projected_spot_diameter_microns <- spot_diameter_microns/cos(beam_angle_deg*pi/180)
