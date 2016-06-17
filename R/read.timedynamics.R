@@ -46,7 +46,12 @@ read.timedynamics<-function(filename, av,time_max = 4, time_offset = 0, zero_off
   
   data_offset<-data_mean
   
-  data_final <- data_offset - mean(data_offset[zero_offset])
+  if(!is.na(zero_offset)){
+    data_final <- data_offset - mean(data_offset[zero_offset])
+  }else{
+    data_final <- data_offset
+  }
+  
   
   if (quick_plot) {
     plot(time, data_final, xlab = "time (ps)", ylab = "signal (mV)", 
