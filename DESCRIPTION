@@ -11,7 +11,7 @@ Imports:
     akima,
     fields,
     scales,
-    ggplot2
+    tidyverse
 Suggests:
     manipulate
 RoxygenNote: 5.0.1
